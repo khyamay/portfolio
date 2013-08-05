@@ -1,0 +1,1312 @@
+/*
+Theme Name: Portfolio for Khemra Thapa
+Theme URI: http://wptreehouse.com/portfolio-project/
+Description: A custom WordPress portfolio for Khemraj Thapa"
+Author: Khemraj Thapa
+Author URI: http://iamkhem.com
+Version: 1.0
+Tags: clean, light, responsive, two-column, custom-post-types, custom-fields, portfolio
+
+License: GNU General Public License v2.0
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+*/
+
+/* ==========================================================================
+   HTML5 Boilerplate styles - h5bp.com (generated via initializr.com)
+   ========================================================================== */
+html,
+button,
+input,
+select,
+textarea {
+}
+
+body {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+::-moz-selection {
+    background: #ffb7b7;
+    text-shadow: none;
+}
+
+::selection {
+    background: #ffb7b7;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+img {
+    vertical-align: middle
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical
+}
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+/* ===== Initializr Styles ==================================================
+   Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
+   ========================================================================== */
+body {
+    font: 1em/1.5em 'PT Sans', Helvetica, Helvetica Neue, Arial;
+    color: #f4f5f0;
+    background: #f4f5f0;
+}
+
+.wrapper {
+    width: 90%;
+    margin: 0 5%;
+}
+/* ==============
+    MOBILE: Menu
+   ============== */
+nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    font-size: 20px;
+    display: block;
+    margin-bottom: 10px;
+    padding: 15px 0;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    color: #5CB86E;
+}
+
+
+nav a:hover {
+    text-decoration: none;
+}
+/* ==============
+    MOBILE: Main
+   ============== */
+.main {
+    padding: 20px 0
+}
+
+.footer-container footer {
+    padding: 20px 0;
+}
+/* ===============
+    ALL: IE Fixes
+   =============== */
+.ie7 .title {
+    padding-top: 20px;
+}
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+* {
+-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box; /* Firefox, other Gecko */
+  box-sizing: border-box; /* Opera/IE 8+ */
+}
+.header-container {
+    height: auto;
+    background: #f4f5f0;
+}
+
+.header-container:after {
+    content: "";
+    display: block;
+    position: relative;
+    height: 20px;
+    background: -webkit-linear-gradient(135deg, transparent 50%, #F4F5F0 50%) 0 50%, -webkit-linear-gradient( 45deg, transparent 50%, #F4F5F0 50%) 0 50%;
+    background: -moz-linear-gradient(135deg, transparent 50%, #F4F5F0 50%) 0 50%, -moz-linear-gradient( 45deg, transparent 50%, #F4F5F0 50%) 0 50%;
+    background: -o-linear-gradient(135deg, transparent 50%, #F4F5F0 50%) 0 50%, -o-linear-gradient( 45deg, transparent 50%, #F4F5F0 50%) 0 50%;
+    background: -ms-linear-gradient(135deg, transparent 50%, #F4F5F0 50%) 0 50%, -ms-linear-gradient( 45deg, transparent 50%, #F4F5F0 50%) 0 50%;
+    background: linear-gradient(-45deg, transparent 50%, #F4F5F0 50%) 0 50%, linear-gradient( 45deg, transparent 50%, #F4F5F0 50%) 0 50%;
+    background-repeat: repeat-x;
+    -webkit-background-size: 20px 20px, 20px 20px;
+    -moz-background-size: 20px 20px, 20px 20px;
+    background-size: 20px 20px, 20px 20px;
+    background-position: left top;
+    margin-bottom: -20px;
+}
+
+.main-container {
+    margin-bottom: -20px
+}
+
+.logo {
+    display: inline-block;
+    margin-top: 5px;
+    width: 150px;
+    height: 65px;
+}
+
+.logo:hover {
+    cursor: pointer;
+    text-decoration: none;
+}
+#topnav span {
+    position: relative;
+    top: -9999px;
+}
+#navbtn {
+    background: url(images/socialicon.png) no-repeat -225px -418px;
+    width: 18px;
+    height: 13px;
+}
+#topnav #navbtn {
+    position: relative;
+    display: none;
+    float: right;
+    clear: both;
+    top: 10px;
+    overflow: hidden;
+    color: #5CB86E;
+    text-decoration: none;
+}
+.current-menu-item a,
+#topnav ul a:hover {
+    color: #f4f5f0;
+    background: -webkit-linear-gradient(-45deg, #5CB86E 5px, transparent 0) 0 5px, -webkit-linear-gradient(-135deg, #5CB86E 5px, #F4F5F0 0) 0 5px;
+    background: -moz-linear-gradient(-135deg, #5CB86E 5px, transparent 0) 0 5px, -moz-linear-gradient(135deg, #5CB86E 5px, #F4F5F0 0) 0 5px;
+    background: -o-linear-gradient(-135deg, #5CB86E 5px, transparent 0) 0 5px, -o-linear-gradient(135deg, #5CB86E 5px, #F4F5F0 0) 0 5px;
+    background: -ms-linear-gradient(-135deg, #5CB86E 5px, transparent 0) 0 5px, -ms-linear-gradient(135deg, #5CB86E 5px, #F4F5F0 0) 0 5px;
+    background: linear-gradient(-135deg, #5CB86E 5px, transparent 0) 0 5px, linear-gradient(135deg, #5CB86E 5px, #F4F5F0 0) 0 5px;
+    background-color: #5CB86E;
+    background-position: left bottom;
+    background-repeat: repeat-x;
+    -webkit-background-size: 10px 10px;
+    -moz-background-size: 10px 10px;
+    background-size: 10px 10px;
+}
+
+.portfolio {
+    background: #5CB86E;
+    position: relative;
+    top: 40px;
+}
+
+.port {
+    position: relative;
+    top: -35px;
+    margin: 0 5%;
+    font-size: 2.5em;
+    line-height: 1.5em;
+    text-align: center;
+    text-shadow: 2px 2px 0px rgba(0,0,0,0.2);
+}
+
+.portfolio:before {
+    z-index:5;
+    content: "";
+    display: block;
+    position: relative;
+    height: 20px;
+    top: -40px;
+    background: -webkit-linear-gradient(-45deg, transparent 50%, #5CB86E 50%) 0 50%, -webkit-linear-gradient( -135deg, transparent 50%, #5CB86E 50%) 0 50%;
+    background: -moz-linear-gradient(-135deg, transparent 50%, #5CB86E 50%) 0 50%, -moz-linear-gradient(-45deg, transparent 50%, #5CB86E 50%) 0 50%;
+    background: -o-linear-gradient(-135deg, transparent 50%, #5CB86E 50%) 0 50%, -o-linear-gradient( 135deg, transparent 50%, #5CB86E 50%) 0 50%;
+    background: -ms-linear-gradient(-135deg, transparent 50%, #5CB86E 50%) 0 50%, -ms-linear-gradient( 135deg, transparent 50%, #5CB86E 50%) 0 50%;
+    background: linear-gradient(-135deg, transparent 50%, #5CB86E 50%) 0 50%, linear-gradient( 135deg, transparent 50%, #5CB86E 50%) 0 50%;
+    background-repeat: repeat-x;
+    -webkit-background-size: 20px 20px, 20px 20px;
+    -moz-background-size: 20px 20px, 20px 20px;
+    background-size: 20px 20px, 20px 20px;
+    background-position: left top;
+}
+
+.slogan {
+    height: 250px;
+    font-family: 'Cabin', Helvetica, arial;
+    text-align: center;
+    margin-bottom: -45px;
+    background: url(images/bg2.jpg) no-repeat left center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding: .5em;
+}
+#banner {
+    color: #fff;
+    height: 100%;
+    overflow: hidden;
+}
+#bannertext {
+    font-family: 'PT Sans', Helvetica, arial;
+    z-index: 0;
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4);
+    left: 5%;
+    width: 90%;
+    position: fixed;
+    text-align: center;
+    margin: auto 0;
+}
+
+.note {
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+.note span {
+    background: rgba(113, 198, 113, 0.3);
+    box-shadow: 10px 0 0 rgba(113, 198, 113, 0.3), -10px 0 0 rgba(113, 198, 113, 0.3);
+}
+
+.social {
+    display: inline-block;
+    list-style: none;
+}
+
+.social li {
+    float: left;
+    margin-right: 25px;
+}
+
+.social_nav {
+    position: relative;
+    bottom: 15px;
+    display: block;
+    text-align: center;
+}
+
+.s_frame {
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.1s ease;
+}
+
+.about {
+    position: relative;
+    top: -25px;
+    display:block;
+}
+
+.about .about-frame {
+    position:relative;
+    z-index:1;
+    margin-left: 1em;
+    margin-bottom: 2em;
+    float: right;
+    border: 10px solid #f4f5f0;
+    -webkit-box-shadow: 0 8px 6px -6px #000;
+    -moz-box-shadow: 0 8px 6px -6px #000;
+    box-shadow: 0 8px 6px -6px #000;
+}
+
+.about img {
+    width: 100%;
+}
+
+.about p {
+    font-family: 'PT Sans', Helvetica, arial;
+    font-size: 1.2em;
+    line-height: 1.5em;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+    position:relative;
+    top:-25px;
+  
+}
+
+.about p:last-child{
+    text-align:center;
+}
+
+.about p:last-child:before 
+{
+    content:'\201C';
+    font-size:2em;
+    position:relative;
+    font-family:'Cabin', Helvetica, arial;
+}
+.about p:last-child:after{
+    content:'\201D';
+    font-size:2em;
+    position:relative;
+    top:12px;
+    font-family:'Cabin', Helvetica, arial;
+}
+.about p:last-child span{
+    top:10px;
+    position:relative;
+    font-family:'Cabin', Helvetica, arial;
+    font-size:1.4em;
+    line-height:1.5em;
+    clear:both;
+}
+.about p:last-child span{
+    background:#F4F5F0;
+    color:#5CB86E;
+}
+.portimages {
+    text-align: center;
+    list-style: none;
+    padding: 20px 0;
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+    top: -55px;
+    margin-bottom: -50px;
+}
+
+.portimages li {
+    display: inline-block;
+    margin: 10px 5px 0 5px;
+    vertical-align: top;
+}
+
+.portimages li a {
+    border: 5px solid #f4f5f0;
+    -webkit-box-shadow: 0 8px 6px -6px #000;
+    -moz-box-shadow: 0 8px 6px -6px #000;
+    box-shadow: 0 8px 6px -6px #000;
+}
+
+.caption {
+    -webkit-backface-visibility: hidden;
+    /* prevent flash when embedding fiddle */
+  display: inline-block;
+    position: relative;
+    margin: 10px;
+    overflow: hidden;
+    text-align: left;
+}
+
+.caption img {
+    display: block;
+    -webkit-transition: opacity 0.3s ease-in-out;
+    -moz-transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.caption:hover img {
+    opacity: 0.5;
+}
+
+.caption:after {
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    color: #f4f5f0;
+    z-index: 1;
+    -webkit-transition: -webkit-transform 0.3s ease-in-out;
+    -moz-transition: -moz-transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+}
+
+.caption:before {
+    position: absolute;
+    width: 100%;
+    height: 80%;
+    color: #f4f5f0;
+    z-index: 1;
+    -webkit-transition: -webkit-transform 0.3s ease-in-out;
+    -moz-transition: -moz-transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+}
+
+.caption::after {
+    content: attr(data-title);
+    top: 0%;
+    background: #0083ab;
+    font-size: 2em;
+    text-align: center;
+    text-shadow: 0 1px 1px #000;
+    padding: 15px 0 0 0;
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    transform: translateY(-100%);
+}
+
+.caption::before {
+    content: attr(data-description);
+    top: 20%;
+    text-align: center;
+    background: #f27545;
+    font-size: 1.25em;
+    ;
+  padding: 75px 0 0 0;
+    -webkit-transform: translateY(100%);
+    -moz-transform: translateY(100%);
+    transform: translateY(100%);
+}
+
+.caption:hover::after,
+.caption:hover::before {
+    -webkit-transform: translateY(0%);
+    -moz-transform: translateY(0%);
+    transform: translateY(0%);
+}
+
+.recentwork {
+    list-style: none;
+    margin: 0 auto;
+    position:relative;
+    top:-15px;
+}
+
+.recentwork img {
+    margin-right: 5em;
+    margin-bottom: -1em;
+    float: left;
+    border: 5px solid #f4f5f0;
+    -webkit-box-shadow: 0 8px 6px -6px #000;
+    -moz-box-shadow: 0 8px 6px -6px #000;
+    box-shadow: 0 8px 6px -6px #000;
+}
+
+figcaption {
+    display: block;
+    position: relative;
+}
+
+figcaption h3 {
+    font-size: 2em;
+    display: inline-block;
+    line-height: 1.5em;
+    border-bottom: 1px solid #000;
+    text-shadow: 2px 2px 0px rgba(0,0,0,0.2);
+}
+
+figcaption span {
+    font-size: 1.25em;
+    display: block;
+    margin-bottom: 1em;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+}
+
+figcaption a {
+    border-radius: 2px;
+    padding: 10px 50px;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    background: #333B42;
+    color: #f4f5f0;
+    box-shadow: 3px 3px 3px  #255;
+}
+
+figcaption a:hover {
+    box-shadow: 3px 1px 4px rgba(0,0,0, .5) inset;
+}
+
+.social_nav p {
+    font-size: 1.2em;
+    line-height: 1.5em;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+}
+
+.social span {
+    position: relative;
+    top: -9999px;
+}
+
+.tweet,
+.linked,
+.email,
+.pdf {
+    background: url('images/socialicon.png') no-repeat;
+}
+
+.tweet {
+    width: 52px;
+    height: 52px;
+    background-position: -1px -203px;
+    position: relative;
+    top: 2px;
+}
+
+.tweet:hover {
+    background-position: -3px -278px;
+    position: relative;
+    top: 2px;
+}
+
+.linked {
+    width: 52px;
+    height: 52px;
+    background-position: -75px -203px;
+    position: relative;
+    top: 2px;
+}
+
+.linked:hover {
+    background-position: -75px -273px;
+    position: relative;
+    top: 2px;
+}
+
+.email {
+    width: 58px;
+    height: 58px;
+    background-position: -146px -200px;
+}
+
+.email:hover {
+    background-position: -146px -270px
+}
+
+.pdf {
+    background-position: -227px -199px;
+    width: 44px;
+    height: 60px;
+}
+
+.pdf:hover {
+    background-position: -227px -269px
+}
+
+.contact {
+    top: 20px;
+    position: relative;
+    background: #f4f5f0;
+}
+
+.contact:before {
+    position: relative;
+    content: " ";
+    display: block;
+    height: 20px;
+    background: -webkit-linear-gradient(135deg, transparent 50%, #5CB86E 50%) 0 50%, -webkit-linear-gradient( 45deg, transparent 50%, #5CB86E 50%) 0 50%;
+    background: -moz-linear-gradient(135deg, transparent 50%, #5CB86E 50%) 0 50%, -moz-linear-gradient( 45deg, transparent 50%, #5CB86E 50%) 0 50%;
+    background: -o-linear-gradient(135deg, transparent 50%, #5CB86E 50%) 0 50%, -o-linear-gradient( 45deg, transparent 50%, #5CB86E 50%) 0 50%;
+    background: -ms-linear-gradient(135deg, transparent 50%, #5CB86E 50%) 0 50%, -ms-linear-gradient( 45deg, transparent 50%, #5CB86E 50%) 0 50%;
+    background: linear-gradient(-45deg, transparent 50%, #5CB86E 50%) 0 50%, linear-gradient( 45deg, transparent 50%, #5CB86E 50%) 0 50%;
+    background-repeat: repeat-x;
+    -webkit-background-size: 20px 20px, 20px 20px;
+    -moz-background-size: 20px 20px, 20px 20px;
+    background-size: 20px 20px, 20px 20px;
+    background-position: left top;
+}
+
+.contact p {
+    padding: 10px;
+    font-size: 1.5em;
+    line-height: 1.5em;
+    color: #5CB86E;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+}
+
+.badge:before {
+    position: relative;
+    z-index: 1;
+    content: " ";
+    display: block;
+    height: 20px;
+    background: -webkit-linear-gradient(135deg, transparent 50%, #5CB86E 50%) 0 50%, -webkit-linear-gradient( 45deg, transparent 50%, #5CB86E 50%) 0 50%;
+    background: -moz-linear-gradient(135deg, transparent 50%, #5CB86E 50%) 0 50%, -moz-linear-gradient( 45deg, transparent 50%, #5CB86E 50%) 0 50%;
+    background: -o-linear-gradient(135deg, transparent 50%, #5CB86E 50%) 0 50%, -o-linear-gradient( 45deg, transparent 50%, #5CB86E 50%) 0 50%;
+    background: -ms-linear-gradient(135deg, transparent 50%, #5CB86E 50%) 0 50%, -ms-linear-gradient( 45deg, transparent 50%, #5CB86E 50%) 0 50%;
+    background: linear-gradient(-45deg, transparent 50%, #5CB86E 50%) 0 50%, linear-gradient( 45deg, transparent 50%, #5CB86E 50%) 0 50%;
+    background-repeat: repeat-x;
+    -webkit-background-size: 20px 20px, 20px 20px;
+    -moz-background-size: 20px 20px, 20px 20px;
+    background-size: 20px 20px, 20px 20px;
+    background-position: left top;
+}
+
+.badge {
+    margin: 20px 0;
+    background: #F4F5F0;
+    color: #5CB86E;
+    position: relative;
+    top: 20px;
+
+}
+/* Controls width of the widget */
+.badge-container {
+    margin: 0 auto;
+    position: relative;
+    bottom: 15px;
+ 
+}
+
+.treehouse-badges {
+    position: relative;
+    top: -10px;
+}
+
+.treehouse-badges li {
+    width: 60px;
+    margin: -10px 3px 0px 0px;
+}
+
+.treehouse-badges li:hover .treehouse-badge-info {
+    bottom: 90px;
+    left: -36px;
+}
+
+.badge-container h1 {
+    position: relative;
+    font-size: 2em;
+    line-height: 1.5em;
+    text-align: center;
+    font-family: 'Helvetica Neue';
+    font-weight: bold;
+    -webkit-font-smoothing: antialiased;
+}
+
+.footer-container:before {
+    display: block;
+    position: relative;
+    content: " ";
+    bottom: 10px;
+    height: 20px;
+    background: -webkit-linear-gradient(-45deg, transparent 50%, #5CB86E 50%) 0 50%, -webkit-linear-gradient( -135deg, transparent 50%, #5CB86E 50%) 0 50%;
+    background: -moz-linear-gradient(135deg, transparent 50%, #5CB86E 50%) 0 50%, -moz-linear-gradient( 45deg, transparent 50%, #5CB86E 50%) 0 50%;
+    background: -o-linear-gradient(135deg, transparent 50%, #5CB86E 50%) 0 50%, -o-linear-gradient( 45deg, transparent 50%, #5CB86E 50%) 0 50%;
+    background: -ms-linear-gradient(135deg, transparent 50%, #5CB86E 50%) 0 50%, -ms-linear-gradient( 45deg, transparent 50%, #5CB86E 50%) 0 50%;
+    background: linear-gradient(-135deg, transparent 50%, #5CB86E 50%) 0 50%, linear-gradient( 135deg, transparent 50%, #5CB86E 50%) 0 50%;
+    background-repeat: repeat-x;
+    -webkit-background-size: 20px 20px, 20px 20px;
+    -moz-background-size: 20px 20px, 20px 20px;
+    background-size: 20px 20px, 20px 20px;
+    background-position: left top;
+}
+
+.footer-container {
+    background: #5CB86E;
+    display: block;
+    position: relative;
+    color: #F4F5F0;
+    text-align: center;
+    margin-top: 35px;
+    margin-bottom: -20px;
+}
+
+.footer-container h3 {
+    position: relative;
+    bottom: 20px;
+}
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+@media only screen and (min-width:240px){
+.slogan h1{
+top:-15px;
+position:relative;
+font-size:1.45em;}
+.slogan p{
+top:-15px;
+position:relative;
+font-size:1.15em;}
+
+}
+@media only screen and (min-width:320px) {
+    .slogan h1{
+    position:relative;
+    top:-15px;
+    font-size: 1.65em;
+    line-height: 1em;
+}
+
+.slogan p {
+    position:relative;
+    font-size: 1.25em;
+    line-height: 1.25em;
+    top:-15px;
+}
+
+.social li {
+    margin-right: 15px;
+}
+figcaption{
+    text-align:center;
+}
+figcaption span{
+    position:relative;
+    top:-5px;
+}
+}
+@media only screen and (min-width: 480px) {
+    /* ====================
+        INTERMEDIATE: Menu
+       ==================== */
+    nav {
+      position: relative;
+    top: -10px;
+}
+
+nav a {
+    float: left;
+    width: 28%;
+    margin: 0 3.8%;
+    padding: 15px 2%;
+    margin-bottom: 0;
+}
+
+nav:first-child a {
+    margin-left: 0;
+}
+
+nav:last-child a {
+    margin-right: 0;
+}
+
+.social li {
+    margin-right: 35px;
+}
+
+.slogan {
+    height: 310px;
+}
+
+.slogan h1 {
+    position:relative;
+    top:10px;
+    font-size: 2em;
+    line-height: 1.5em;
+}
+
+.slogan p {
+    position:relative;
+    top:5px;
+    font-size: 1.45em;
+    line-height: 1.5em;
+}
+
+.note {
+    position: relative;
+    top: -15px;
+}
+
+.recentwork img {
+    width: 100%;
+}
+    
+
+    /* ========================
+        INTERMEDIATE: IE Fixes
+       ======================== */
+nav ul {
+    display: inline;
+}
+
+.oldie nav a {
+    margin: 0 0.7%
+}
+.badge-container h1 {
+    position: relative;
+    font-size: 1.5em;
+}
+}
+@media screen and (max-width: 480px) {
+    .about .caption{
+        width: 90%;
+}
+    #badges li img {
+    width: 45px;
+    margin: -10px 2px 0px 0px;
+}
+
+.slogan {
+    background: #f4f5f0;
+}
+    #bannertext {
+    color: #5cb86e;
+}
+
+.note {
+    text-shadow: none;
+}
+
+.note span {
+    background: none;
+    box-shadow: none;
+}
+
+.tweet,
+    .linked,
+    .email,
+    .pdf {
+    background: url('images/socialicon.png') no-repeat;
+}
+
+.tweet {
+    width: 40px;
+    height: 40px;
+    background-position: -3px -345px;
+}
+
+.tweet:hover {
+    background-position: -3px -404px;
+}
+
+.linked {
+    width: 40px;
+    height: 40px;
+    background-position: -59px -345px;
+}
+
+.linked:hover {
+    background-position: -59px -400px;
+}
+
+.email {
+    width: 44px;
+    height: 44px;
+    background-position: -112px -343px;
+}
+
+.email:hover {
+    background-position: -112px -398px;
+}
+
+.pdf {
+    background-position: -173px -342px;
+    width: 34px;
+    height: 46px;
+}
+
+.pdf:hover {
+    background-position: -173px -397px;   
+}
+.about p{
+    top:-10px;
+}
+}
+
+@media screen and (max-width: 580px) {
+    nav a {
+    float: left;
+    width: 27%;
+    margin: 0 0 5px 0;
+    padding: 10px 0;
+}
+
+nav:first-child a {
+    margin-left: 0;
+}
+
+nav:last-child a {
+    margin-right: 0;
+}
+    #topnav {
+    height: auto;
+}
+    #topnav nav {
+    display: none;
+    position: static;
+    width: 100%;
+    top: auto;
+    right: auto;
+}
+    #topnav nav ul a{
+    display: block;
+    width: 100%;
+    line-height: 1.5em;
+    border: 0;
+    background: #5CB86E;
+    color: #F4F5F0;
+    background: -webkit-linear-gradient(135deg, #F4F5F0 5px, transparent 0) 0 5px, -webkit-linear-gradient(-135deg, #F4F5F0 5px, #5CB86E 0) 0 5px;
+    background: -moz-linear-gradient(45deg, #5CB86E 5px, transparent 0) 0 5px, -moz-linear-gradient(135deg, #5CB86E 5px, #F4F5F0 0) 0 5px;
+    background: -o-linear-gradient(45deg, #5CB86E 5px, transparent 0) 0 5px, -o-linear-gradient(135deg, #5CB86E 5px, #F4F5F0 0) 0 5px;
+    background: -ms-linear-gradient(45deg, #5CB86E 5px, transparent 0) 0 5px, -ms-linear-gradient(135deg, #5CB86E 5px, #F4F5F0 0) 0 5px;
+    background: linear-gradient(45deg, #5CB86E 5px, transparent 0) 0 5px, linear-gradient(135deg, #5CB86E 5px, #F4F5F0 0) 0 5px;
+    background-color: #5CB86E;
+    background-position: right top;
+    background-repeat: repeat-y;
+    -webkit-background-size: 10px 100px;
+    -moz-background-size: 10px 10px;
+    background-size: 10px 10px;
+}
+    .current-menu-item a, #topnav nav ul a:hover {
+   
+    color: #f4f5f0;
+    background: -webkit-linear-gradient(-45deg, #5CB86E 5px, transparent 0) 0 5px, -webkit-linear-gradient(-135deg, #5CB86E 5px, #F4F5F0 0) 0 5px;
+    background: -moz-linear-gradient(-135deg, #5CB86E 5px, transparent 0) 0 5px, -moz-linear-gradient(135deg, #5CB86E 5px, #F4F5F0 0) 0 5px;
+    background: -o-linear-gradient(-135deg, #5CB86E 5px, transparent 0) 0 5px, -o-linear-gradient(135deg, #5CB86E 5px, #F4F5F0 0) 0 5px;
+    background: -ms-linear-gradient(-135deg, #5CB86E 5px, transparent 0) 0 5px, -ms-linear-gradient(135deg, #5CB86E 5px, #F4F5F0 0) 0 5px;
+    background: linear-gradient(-135deg, #5CB86E 5px, transparent 0) 0 5px, linear-gradient(135deg, #5CB86E 5px, #F4F5F0 0) 0 5px;
+    background-color: #5CB86E;
+    background-position: left bottom;
+    background-repeat: repeat-x;
+    -webkit-background-size: 10px 10px;
+    -moz-background-size: 10px 10px;
+    background-size: 10px 10px;
+}
+    #topnav #navbtn {
+    display: block;
+}
+}
+
+@media screen and (min-width:580px) {
+    .slogan{
+    height: 280px;
+}
+
+.treehouse-badges li {
+    width: 60px;
+}
+}
+@media screen and (max-width:650px) {
+    .recentwork img{
+width: 100%;
+}
+
+.caption img {
+    width: 100%;
+}
+
+}
+@media screen and (min-width:624px) {
+    .slogan{
+     height: 380px;
+}
+
+.note {
+    position: relative;
+    top: -20px;
+}
+
+.slogan h1 {
+    font-size: 2.5em;
+    line-height: 1.5em;
+}
+
+.slogan p {
+    top:-10px;
+    font-size: 1.90em;
+    line-height: 1.55em;
+}
+
+.treehouse-badges li {
+    width: 65px;
+}
+
+}
+
+@media only screen and (min-width: 768px) {
+    nav {
+      float: right;
+    width: 40%;
+}
+
+.logo {
+    float: left;
+    display: inline-block;
+    margin-left: 1%;
+    font-size: 2.5em;
+}
+
+.social li {
+    margin-right: 65px;
+}
+
+.slogan {
+    height: 450px;
+}
+
+.slogan h1 {
+    font-size: 2.75em;
+    line-height: 1.5em;
+}
+
+.note {
+    position: relative;
+    top: -25px;
+}
+
+.slogan p {
+ position:realitve;
+    top:-20px;
+    font-size: 2.25em;
+    line-height: 2em;
+}
+
+.recentwork img {
+    width: 60%;
+}
+
+.recentwork {
+    height: 330px;
+}
+
+figcaption{
+    text-align:left;
+}
+
+.portimages {
+    text-align: center;
+    margin: 0 auto;
+    height: 490px;
+}
+
+.caption img {
+    width: 330px;
+}
+
+.treehouse-badges li {
+    width: 70px;
+}
+.about p{
+    font-size:1.5em;
+}
+.about p:last-child span{
+    font-size:1.3em;
+}
+
+}
+
+@media only screen and (min-width:900px) {
+    .recentwork{
+    height: 380px;
+}
+
+.portimages {
+    height: 480px;
+}
+
+}
+@media only screen and (min-width:1024px) {
+    .caption img{
+width: 280px
+}
+
+.treehouse-badges li {
+    width: 75px;
+}
+
+.portimages {
+    height: 180px;
+}
+
+}
+
+
+
+@media only screen and (min-width: 1120px) {
+    /* ===============
+        Maximal Width
+       =============== */
+    .wrapper {
+      width: 1026px;
+    /* 1120px - 10% for margins */
+      margin: 0 auto;
+}
+
+nav a {
+    float: left;
+    width: 28%;
+    margin: 0 3.8%;
+    padding: 20px 5%;
+    margin-bottom: 0;
+}
+
+.slogan {
+    height: 480px;
+    text-align: center;
+}
+
+.slogan h1 {
+    font-size: 3em;
+    line-height: 2em;
+}
+
+.note {
+    position: relative;
+    top: -40px;
+}
+
+.slogan p {
+    position:realitve;
+    top:-35px;
+    font-size: 2.75em;
+    line-height: 2.15em;
+}
+
+.recentwork {
+    height: 420px;
+}
+
+.social li {
+    margin-right: 85px;
+}
+
+.tweet,
+    .linked,
+    .email,
+    .pdf {
+    background: url('images/socialicon.png') no-repeat;
+}
+
+.tweet {
+    width: 70px;
+    height: 70px;
+    background-position: 0px -5px;
+}
+
+.tweet:hover {
+    background-position: 0 -104px;
+}
+
+.linked {
+    width: 70px;
+    height: 70px;
+    background-position: -89px -5px;
+}
+
+.linked:hover {
+    background-position: -89px -98px;
+}
+
+.email {
+    width: 78px;
+    height: 78px;
+    background-position: -173px -1px;
+}
+
+.email:hover {
+    background-position: -173px -94px;
+}
+
+.pdf {
+    background-position: -271px 0;
+    width: 60px;
+    height: 80px;
+}
+
+.pdf:hover {
+    background-position: -271px -93px;
+}
+
+.treehouse-badges li {
+    width: 85px;
+}
+    
+    
+}
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1
+}
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+@media print {
+    * {
+      background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster: h5bp.com/s */;
+    box-shadow: none !important;
+    text-shadow: none !important;
+}
+
+a,
+    a:visited {
+    text-decoration: underline
+}
+
+a[href]:after {
+    content: " (" attr(href) ")"
+}
+
+abbr[title]:after {
+    content: " (" attr(title) ")"
+}
+    /*
+         * Don't show links for images, or javascript/internal links
+         */
+.ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+    content: ""
+}
+
+pre,
+    blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+}
+
+thead {
+    display: table-header-group;
+    /* h5bp.com/t */
+}
+
+tr,
+    img {
+    page-break-inside: avoid;
+}
+
+img {
+    max-width: 100% !important
+}
+}
