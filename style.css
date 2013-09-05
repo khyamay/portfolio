@@ -1268,6 +1268,28 @@ nav a {
     box-shadow: none !important;
     text-shadow: none !important;
 }
+#topnav, .badge, .icon-logo, #footer{
+    display:none;
+} 
+
+body{
+    text-align:center;
+}
+.port{
+    margin-top:-2cm;
+}
+
+span{
+    font-size:15pt;
+}
+
+@page {
+    margin-left: 2.5cm;  
+}
+
+@page :first{
+    margin-top:2cm;
+}
 
 a,
     a:visited {
